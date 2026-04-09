@@ -14,11 +14,13 @@ class Employee {
 
 // TODO: Create class Officer extends Employee
 class Officer extends Employee {
+    // Add 'specialization' attribute
     String specialization;
 }
 
 // TODO: Create class Manager extends Employee
 class Manager extends Employee {
+    // Add 'department' attribute
     String department;
 }
 
@@ -30,22 +32,22 @@ public class EmployeeInheritance {
         Officer off = new Officer();
         off.name = sc.nextLine();
         off.age = sc.nextInt();
-        sc.nextLine(); // Clear buffer
+        sc.nextLine(); // Consume newline buffer
         off.phoneNumber = sc.nextLine();
         off.address = sc.nextLine();
         off.salary = sc.nextDouble();
-        sc.nextLine(); // Clear buffer
+        sc.nextLine(); // Consume newline buffer
         off.specialization = sc.nextLine();
 
         // --- MANAGER INPUT ---
         Manager man = new Manager();
         man.name = sc.nextLine();
         man.age = sc.nextInt();
-        sc.nextLine(); // Clear buffer
+        sc.nextLine(); // Consume newline buffer
         man.phoneNumber = sc.nextLine();
         man.address = sc.nextLine();
         man.salary = sc.nextDouble();
-        sc.nextLine(); // Clear buffer
+        sc.nextLine(); // Consume newline buffer
         man.department = sc.nextLine();
 
         // --- OUTPUT ---
@@ -54,8 +56,8 @@ public class EmployeeInheritance {
         System.out.println(off.age);
         System.out.println(off.phoneNumber);
         System.out.println(off.address);
-        // Using int cast or simple print to match example output format
-        System.out.println((int)off.salary); 
+        // Cast to int to match the example output format
+        System.out.println((int)off.salary);
         System.out.println(off.specialization);
 
         System.out.println("Manager:");
